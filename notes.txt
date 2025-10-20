@@ -1,0 +1,94 @@
+Git & Shell — concise tutorial description
+
+Purpose
+Provide a compact, practical introduction to using a Unix-like shell and Git for everyday development tasks. Focus on commands, workflows, and best practices you can apply immediately.
+
+Prerequisites
+- Basic familiarity with a terminal emulator (PowerShell, Git Bash, WSL, macOS Terminal, Linux).
+- Git installed and configured: git config --global user.name "Name"; git config --global user.email "you@example.com"
+
+Shell essentials (common commands)
+- Navigation: pwd; ls; cd path
+- File ops: touch file; mkdir dir; cp src dst; mv src dst; rm file; rm -r dir
+- Viewing: cat file; less file; head file; tail file
+- Permission & execution: chmod +x script.sh; ./script.sh
+- I/O & pipelines: command > out.txt; command >> out.txt; command1 | command2
+- Searching: grep -R "pattern" .
+- Process: ps aux | grep name; kill PID
+- Shortcuts: tab completion, Ctrl+C to cancel, Ctrl+R reverse search in history
+
+Quick Git concepts
+- Repository: directory tracked by Git (.git)
+- Commit: recorded snapshot of changes
+- Branch: independent line of development
+- Remote: hosted repo (e.g., origin on GitHub)
+- Staging area: index where changes are prepared before commit
+
+Common Git workflow
+1. Initialize or clone
+    - git init
+    - git clone <url>
+2. Inspect state
+    - git status
+    - git diff           (unstaged changes)
+    - git diff --staged  (staged changes)
+3. Stage and commit
+    - git add file1 file2
+    - git add -A         (all changes)
+    - git commit -m "Short, imperative message"
+4. Branching & switching
+    - git branch           (list branches)
+    - git branch feature/x
+    - git checkout feature/x
+    - git switch -c feature/x
+5. Sync with remote
+    - git remote add origin <url>   (once)
+    - git fetch origin
+    - git pull origin main
+    - git push origin feature/x
+6. Integrate changes
+    - git merge main
+    - git rebase main
+7. Stash temporary work
+    - git stash
+    - git stash pop
+
+Useful commands
+- git log --oneline --graph --decorate --all
+- git show <commit>
+- git reset --soft <commit>   (move HEAD, keep staged)
+- git reset --hard <commit>   (discard working changes)
+- git restore --staged file   (unstage)
+- git clean -fd               (remove untracked files; use with caution)
+
+Resolving conflicts
+- Open conflicting files, look for <<<<<<<, ========, >>>>>>> markers.
+- Edit to resolve, git add resolved-file, then git commit (or git rebase --continue).
+
+Best practices
+- Make small, focused commits with clear messages.
+- Use branches for features and fixes.
+- Keep main branch deployable.
+- Use .gitignore for generated files and secrets.
+- Review diffs before commit: git diff and git add -p
+- Push frequently and pull before you start new work.
+
+Minimal .gitignore example
+# Node
+node_modules/
+dist/
+.env
+
+Aliases and config tips
+- git config --global core.editor "code --wait"
+- git config --global alias.st status
+- git config --global alias.co checkout
+- git config --global alias.br branch
+- git config --global alias.cm "commit -m"
+
+Further learning (next steps)
+- Practice branching, merging, and rebasing on a toy repo.
+- Learn interactive rebase (git rebase -i) for history cleanup.
+- Explore GitHub/GitLab features: pull requests, CI, protected branches.
+
+This note is a compact cheat-sheet to get started and to keep next to your terminal.

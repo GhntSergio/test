@@ -1,0 +1,57 @@
+GitHub Copilot: GitHub Copilot
+
+Short definitions and the differences — concise, practical.
+
+- Git
+  - Definition: A distributed version-control system for tracking changes in files and coordinating work on source code.
+  - Scope: Runs locally; stores commits, branches, tags in a local repository (.git folder).
+  - Typical commands: init, clone, add, commit, branch, merge, push, pull.
+  - Gotcha: Git itself is storage + history; remote hosting is separate.
+
+- Bash
+  - Definition: A Unix shell and command language (Bourne Again SHell). It interprets commands and runs scripts.
+  - Scope: Provides a command-line environment (run programs, chain commands, write shell scripts).
+  - Typical usage: running git commands, automating tasks, manipulating files.
+  - Gotcha: Bash is not a VCS — it’s the tool you use to call git or other programs.
+
+- GitHub
+  - Definition: A web-based hosting service for Git repositories with collaboration features (PRs, issues, code review).
+  - Scope: Remote repo hosting, web UI, GitHub Actions (CI/CD), package registry, social/collaboration features.
+  - Typical: Public open-source hosting; strong community and integrations.
+  - Gotcha: “GitHub” is the service — you still use Git locally; GitHub enforces auth (PATs, OAuth).
+
+- GitLab
+  - Definition: A web-based Git repository manager offering repo hosting plus built-in CI/CD, issue tracking, and more.
+  - Scope: Similar to GitHub but with integrated CI/CD (GitLab CI), strong self-hosting options (CE/EE).
+  - Typical: Teams wanting an all-in-one DevOps platform or self-hosted control.
+  - Gotcha: Terminology: GitLab uses “Merge Request” where GitHub calls it “Pull Request.”
+
+Key differences (quick):
+- Git vs GitHub/GitLab: Git = tool; GitHub/GitLab = services that host Git repositories and add collaboration/CI features.
+- Bash vs Git: Bash = shell for running commands/scripts; Git = the version-control program you usually run from a shell.
+- GitHub vs GitLab: Both host Git repositories; GitHub has large OSS community and many integrations; GitLab emphasizes built-in CI/CD and easy self-hosting.
+
+Quick examples (commands you’ll use):
+
+````bash
+# create a repo locally, make first commit, push to remote
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin git@github.com:username/repo.git
+git push -u origin main
+````
+
+````bash
+# small bash script (run from shell)
+#!/usr/bin/env bash
+set -e
+git status --short
+````
+
+Recommended learning path:
+1. Learn basic Git workflow locally (clone, branch, commit, merge, push).
+2. Use Bash to run/git automate commands and write small scripts.
+3. Pick GitHub or GitLab depending on team needs (community + integrations vs integrated CI/self-hosting).
+
+If you want, tell me whether you prefer GUI or CLI and I’ll give a 5-step cheat-sheet tailored to that.
