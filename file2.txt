@@ -9,4 +9,4 @@ Major recent upgrades (summary up to mid‑2024):
 - Open models and ecosystems: higher-quality open models and community toolchains (inference libs, quantizers, vector DBs).
 - Developer UX: better APIs, streaming, multimodal input formats, and production-ready SDKs for embedding/RAG workflows.
 
-If you want, I can list recent papers/releases, or show a simple RAG or LoRA example for your codebase.
+Just a few mofications for the dev branch test.

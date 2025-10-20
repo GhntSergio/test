@@ -62,7 +62,7 @@ Useful commands
 - git clean -fd               (remove untracked files; use with caution)
 
 Resolving conflicts
-- Open conflicting files, look for <<<<<<<, =======, >>>>>>> markers.
+- Open conflicting files, look for <<<<<<<, ========, >>>>>>> markers.
 - Edit to resolve, git add resolved-file, then git commit (or git rebase --continue).
 
 Best practices

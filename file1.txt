@@ -54,4 +54,4 @@ Recommended learning path:
 2. Use Bash to run/git automate commands and write small scripts.
 3. Pick GitHub or GitLab depending on team needs (community + integrations vs integrated CI/self-hosting).
 
-If you want, tell me whether you prefer GUI or CLI and I’ll give a 5-step cheat-sheet tailored to that.
+test on feat1
