@@ -1,0 +1,12 @@
+Major recent upgrades (summary up to mid‑2024):
+
+- Model capabilities: larger, better‑trained LLMs with improved instruction following and reasoning.
+- Multimodality: models that combine text, images (and sometimes audio/video) in a single system.
+- Retrieval & RAG: widespread use of retrieval-augmented generation—vector stores + embeddings for up-to-date, grounded outputs.
+- Tooling and tool use: models routinely call external tools (search, calculators, code runners, browsers, APIs).
+- Efficiency: quantization, LoRA/adapter‑style finetuning, and sparsity make large models cheaper to run and fine‑tune.
+- Safety and alignment: more instruction-tuning, RLHF, guardrails, and evaluation suites to reduce hallucinations and harmful outputs.
+- Open models and ecosystems: higher-quality open models and community toolchains (inference libs, quantizers, vector DBs).
+- Developer UX: better APIs, streaming, multimodal input formats, and production-ready SDKs for embedding/RAG workflows.
+
+Just a few mofications for the dev branch test.
