@@ -1,0 +1,11 @@
+git bisect start
+# status: waiting for both good and bad commits
+# bad: [2ae283c2b2f1d3d6f66b4f74d5dc49508dff762a] test-2 for wrong commit
+git bisect bad 2ae283c2b2f1d3d6f66b4f74d5dc49508dff762a
+# status: waiting for good commit(s), bad commit known
+# good: [4efb045c7bd7c2620d2183907a8bcb5ffd4769a4] Added image to Hello World
+git bisect good 4efb045c7bd7c2620d2183907a8bcb5ffd4769a4
+# good: [8e759ce9a7e488077b05c2a99c312bed00042435] Initial commit
+git bisect good 8e759ce9a7e488077b05c2a99c312bed00042435
+# bad: [f7323fb5d0939327efded4dacb491e6d661041e3] test for wrong commit
+git bisect bad f7323fb5d0939327efded4dacb491e6d661041e3
