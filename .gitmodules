@@ -1,3 +1,3 @@
-[submodule "test"]
-	path = test
-	url = https://github.com/Kadir-King/test.git
+[submodule "libs/utils-library"]
+	path = libs/utils-library
+	url = https://github.com/GhntSergio/utils-library.git
