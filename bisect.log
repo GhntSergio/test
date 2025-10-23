@@ -1,4 +1,4 @@
-git bisect start
+ git bisect start
 # status: waiting for both good and bad commits
 # bad: [2ae283c2b2f1d3d6f66b4f74d5dc49508dff762a] test-2 for wrong commit
 git bisect bad 2ae283c2b2f1d3d6f66b4f74d5dc49508dff762a
